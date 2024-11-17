@@ -17,22 +17,27 @@ var (
 	errInvalidSQLTag     = errors.New("invalid sql tag")
 )
 
+// Create interface allows creating a resource.
 type Create interface {
 	Create(c *Context) (interface{}, error)
 }
 
+// GetAll interface allows retrieving all resources.
 type GetAll interface {
 	GetAll(c *Context) (interface{}, error)
 }
 
+// Get interface allows retrieving a single resource.
 type Get interface {
 	Get(c *Context) (interface{}, error)
 }
 
+// Update interface allows updating a resource.
 type Update interface {
 	Update(c *Context) (interface{}, error)
 }
 
+// GetAll interface allows retrieving all resources.
 type Delete interface {
 	Delete(c *Context) (interface{}, error)
 }
